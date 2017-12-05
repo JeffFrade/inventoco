@@ -171,11 +171,11 @@ return [
         /*
          * Application Service Providers...
          */
-        inventoco\Providers\AppServiceProvider::class,
-        inventoco\Providers\AuthServiceProvider::class,
-        // inventoco\Providers\BroadcastServiceProvider::class,
-        inventoco\Providers\EventServiceProvider::class,
-        inventoco\Providers\RouteServiceProvider::class,
+        invoco\Providers\AppServiceProvider::class,
+        invoco\Providers\AuthServiceProvider::class,
+        // invoco\Providers\BroadcastServiceProvider::class,
+        invoco\Providers\EventServiceProvider::class,
+        invoco\Providers\RouteServiceProvider::class,
 
     ],
 

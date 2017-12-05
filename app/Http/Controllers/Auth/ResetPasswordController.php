@@ -1,8 +1,8 @@
 <?php
 
-namespace inventoco\Http\Controllers\Auth;
+namespace invoco\Http\Controllers\Auth;
 
-use inventoco\Http\Controllers\Controller;
+use invoco\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ResetsPasswords;
 
 class ResetPasswordController extends Controller

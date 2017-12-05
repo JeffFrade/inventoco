@@ -1,6 +1,6 @@
 <?php
 
-namespace inventoco\Http\Middleware;
+namespace invoco\Http\Middleware;
 
 use Closure;
 use Illuminate\Support\Facades\Auth;

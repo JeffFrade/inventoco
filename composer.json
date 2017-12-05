@@ -23,7 +23,7 @@
             "database/factories"
         ],
         "psr-4": {
-            "inventoco\\": "app/"
+            "invoco\\": "app/"
         }
     },
     "autoload-dev": {

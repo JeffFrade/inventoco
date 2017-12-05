@@ -1,6 +1,6 @@
 <?php
 
-namespace inventoco\Providers;
+namespace invoco\Providers;
 
 use Illuminate\Support\ServiceProvider;
 

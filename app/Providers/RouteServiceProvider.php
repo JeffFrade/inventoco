@@ -1,6 +1,6 @@
 <?php
 
-namespace inventoco\Providers;
+namespace invoco\Providers;
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
@@ -14,7 +14,7 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @var string
      */
-    protected $namespace = 'inventoco\Http\Controllers';
+    protected $namespace = 'invoco\Http\Controllers';
 
     /**
      * Define your route model bindings, pattern filters, etc.
