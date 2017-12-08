@@ -4,7 +4,9 @@ namespace InvOco;
 
 use Illuminate\Database\Eloquent\Model;
 
-class level extends Model
+class Level extends Model
 {
-    //
+    protected $primaryKey = 'id_level';
+
+    public $timestamps = false;
 }
