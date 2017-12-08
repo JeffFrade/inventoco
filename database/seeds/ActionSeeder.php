@@ -1,8 +1,9 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use InvOco\Action;
 
-class DatabaseSeeder extends Seeder
+class ActionSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,6 +12,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UsersTableSeeder::class;
+        $actions = new Action();
     }
 }

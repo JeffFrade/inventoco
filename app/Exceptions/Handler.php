@@ -1,6 +1,6 @@
 <?php
 
-namespace invoco\Exceptions;
+namespace InvOco\Exceptions;
 
 use Exception;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;

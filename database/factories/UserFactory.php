@@ -13,7 +13,7 @@ use Faker\Generator as Faker;
 |
 */
 
-$factory->define(invoco\User::class, function (Faker $faker) {
+$factory->define(InvOco\User::class, function (Faker $faker) {
     static $password;
 
     return [

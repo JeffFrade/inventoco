@@ -1,8 +1,8 @@
 <?php
 
-namespace invoco\Http\Controllers\Auth;
+namespace InvOco\Http\Controllers\Auth;
 
-use invoco\Http\Controllers\Controller;
+use InvOco\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\SendsPasswordResetEmails;
 
 class ForgotPasswordController extends Controller

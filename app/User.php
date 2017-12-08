@@ -1,6 +1,6 @@
 <?php
 
-namespace invoco;
+namespace InvOco;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;

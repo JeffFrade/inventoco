@@ -1,9 +1,9 @@
 <?php
 
-namespace invoco\Http\Controllers\Auth;
+namespace InvOco\Http\Controllers\Auth;
 
-use invoco\User;
-use invoco\Http\Controllers\Controller;
+use InvOco\User;
+use InvOco\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 
@@ -58,7 +58,7 @@ class RegisterController extends Controller
      * Create a new user instance after a valid registration.
      *
      * @param  array  $data
-     * @return \invoco\User
+     * @return \InvOco\User
      */
     protected function create(array $data)
     {

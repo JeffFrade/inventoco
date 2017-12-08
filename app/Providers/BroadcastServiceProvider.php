@@ -1,6 +1,6 @@
 <?php
 
-namespace invoco\Providers;
+namespace InvOco\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Broadcast;

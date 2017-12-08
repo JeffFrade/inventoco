@@ -1,6 +1,6 @@
 <?php
 
-namespace invoco\Http\Controllers;
+namespace InvOco\Http\Controllers;
 
 use Illuminate\Http\Request;
 

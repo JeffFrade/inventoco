@@ -1,6 +1,6 @@
 <?php
 
-namespace invoco\Http\Middleware;
+namespace InvOco\Http\Middleware;
 
 use Illuminate\Cookie\Middleware\EncryptCookies as Middleware;
 

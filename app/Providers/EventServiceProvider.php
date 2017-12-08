@@ -1,6 +1,6 @@
 <?php
 
-namespace invoco\Providers;
+namespace InvOco\Providers;
 
 use Illuminate\Support\Facades\Event;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
@@ -13,8 +13,8 @@ class EventServiceProvider extends ServiceProvider
      * @var array
      */
     protected $listen = [
-        'invoco\Events\Event' => [
-            'invoco\Listeners\EventListener',
+        'InvOco\Events\Event' => [
+            'InvOco\Listeners\EventListener',
         ],
     ];
 

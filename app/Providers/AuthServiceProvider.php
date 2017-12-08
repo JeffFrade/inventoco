@@ -1,6 +1,6 @@
 <?php
 
-namespace invoco\Providers;
+namespace InvOco\Providers;
 
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
@@ -13,7 +13,7 @@ class AuthServiceProvider extends ServiceProvider
      * @var array
      */
     protected $policies = [
-        'invoco\Model' => 'invoco\Policies\ModelPolicy',
+        'InvOco\Model' => 'InvOco\Policies\ModelPolicy',
     ];
 
     /**
