@@ -1,6 +1,6 @@
 <?php
 
-use Illuminate\Database\Seeder;
+use Illuminate\Database\Seeder as Seeder;
 use InvOco\Action;
 
 class ActionSeeder extends Seeder
@@ -12,6 +12,10 @@ class ActionSeeder extends Seeder
      */
     public function run()
     {
-        $actions = new Action();
+        Action::create(['action' => 'create']);
+        Action::create(['action' => 'read']);
+        Action::create(['action' => 'update']);
+        Action::create(['action' => 'delete']);
+        Action::create(['action' => 'relatory']);
     }
 }
