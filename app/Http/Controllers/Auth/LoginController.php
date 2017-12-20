@@ -4,7 +4,6 @@ namespace InvOco\Http\Controllers\Auth;
 
 use InvOco\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
-use InvOco\Repositories\UserRepository;
 
 class LoginController extends Controller
 {
@@ -26,7 +25,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/dashboard';
 
     /**
      * Create a new controller instance.

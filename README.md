@@ -1,3 +1,3 @@
-# INVENTOCO
+# INVOCO
 
-Inventoco is a inventory and occurrence management system.
+Invoco is a inventory and occurrence management system.

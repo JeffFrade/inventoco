@@ -13,13 +13,9 @@
 
 Route::get('/', function () {
     Session::flush();
-    return view('auth.login');
+    return redirect('/login');
 });
 
 Auth::routes();
 
-Route::get('/main', 'HomeController@index')->name('main');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
