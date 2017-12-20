@@ -12,8 +12,13 @@
 */
 
 Route::get('/', function () {
+    Session::flush();
     return view('auth.login');
 });
+
+Auth::routes();
+
+Route::get('/main', 'HomeController@index')->name('main');
 
 Auth::routes();
 

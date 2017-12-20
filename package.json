@@ -12,10 +12,6 @@
     "devDependencies": {
         "axios": "^0.17",
         "cross-env": "^5.1",
-        "gulp": "^3.9.1",
-        "gulp-clean-css": "^3.9.0",
-        "gulp-concat": "^2.6.1",
-        "gulp-less": "^3.3.2",
         "laravel-mix": "^1.0",
         "lodash": "^4.17.4",
         "vue": "^2.5.7"
