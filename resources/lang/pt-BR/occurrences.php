@@ -1,0 +1,5 @@
+<?php
+
+    return [
+        'occurrences' => 'Ocorrências',
+    ];

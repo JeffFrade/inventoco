@@ -22,7 +22,7 @@
                                 <div class="form-group {{ $errors->has('password') ? ' has-error' : '' }}">
                                     <div class="input-group">
                                         <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
-                                        <input class="form-control" placeholder="Senha" id="password" name="password" type="password">
+                                        <input class="form-control" placeholder="{{ trans('auth.password') }}" id="password" name="password" type="password">
                                     </div>
                                 </div>
 
