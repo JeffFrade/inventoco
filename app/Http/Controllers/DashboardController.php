@@ -24,7 +24,22 @@ class DashboardController extends Controller
      */
     public function index()
     {
+        $stocksTable = \Lava::DataTable();
+
+        $stocksTable->addDateColumn('Day of Month')
+            ->addNumberColumn('Projected')
+            ->addNumberColumn('Official');
+
+        // Random Data For Example
+        for ($a = 1; $a < 30; $a++) {
+            $stocksTable->addRow([
+                '2015-10-' . $a, rand(800,1000), rand(800,1000)
+            ]);
+        }
+
+        $chart = \Lava::LineChart('MyStocks', $stocksTable);
+
         $user = User::find(auth()->id());
-        return view('dashboard', compact('user'));
+        return view('dashboard', compact('user', 'chart'));
     }
 }

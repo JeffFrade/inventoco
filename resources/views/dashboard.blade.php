@@ -1,4 +1,5 @@
 @extends('layouts.dashboard')
+@include('dashboard.charts')
 
 @section('content')
     <div class="row">
@@ -112,7 +113,9 @@
                     <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i> Area Chart</h3>
                 </div>
                 <div class="panel-body">
-                    <div id="morris-area-chart"></div>
+                    <div id="myChart">
+
+                    </div>
                 </div>
             </div>
         </div>
