@@ -110,12 +110,10 @@
         <div class="col-lg-12">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i> Area Chart</h3>
+                    <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i> {{ trans('dashboard.chart') }} - {{ trans('inventory.equipments') }}</h3>
                 </div>
                 <div class="panel-body">
-                    <div id="myChart">
-
-                    </div>
+                    <div id="myChart"></div>
                 </div>
             </div>
         </div>

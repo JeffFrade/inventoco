@@ -2,4 +2,6 @@
 
     return [
         'inventory' => 'Inventory',
+        'equipment' => 'Equipment',
+        'equipments' => 'Equipments',
     ];

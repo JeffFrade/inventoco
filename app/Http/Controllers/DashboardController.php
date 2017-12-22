@@ -4,6 +4,7 @@ namespace InvOco\Http\Controllers;
 
 use Illuminate\Http\Request;
 use InvOco\User;
+use InvOco\Equipment;
 
 class DashboardController extends Controller
 {
@@ -24,6 +25,8 @@ class DashboardController extends Controller
      */
     public function index()
     {
+        $equipments = (new Equipment())->with('sector')->get();
+
         $stocksTable = \Lava::DataTable();
 
         $stocksTable->addDateColumn('Day of Month')

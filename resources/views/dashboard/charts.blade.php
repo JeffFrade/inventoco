@@ -1,3 +1,3 @@
 @php
-    echo \Lava::render('BarChart', 'MyStocks', 'myChart');
+    echo \Lava::render('LineChart', 'MyStocks', 'myChart');
 @endphp

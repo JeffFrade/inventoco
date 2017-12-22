@@ -1,3 +1,6 @@
 <?php
 
-    return [];
+    return [
+    'chart' => 'Gráfico',
+    'table' => 'Tabela'
+];
