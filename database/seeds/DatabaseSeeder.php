@@ -19,5 +19,10 @@ class DatabaseSeeder extends Seeder
          $this->call(SectorSeeder::class);
          $this->call(RoomSeeder::class);
          $this->call(EquipmentSeeder::class);
+         $this->call(TransferSeeder::class);
+         $this->call(TempSeeder::class);
+         $this->call(CriticalitySeeder::class);
+         $this->call(TypeOccurrenceSeeder::class);
+         $this->call(OccurrenceSeeder::class);
     }
 }

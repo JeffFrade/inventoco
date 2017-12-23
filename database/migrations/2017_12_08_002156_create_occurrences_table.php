@@ -17,6 +17,7 @@ class CreateOccurrencesTable extends Migration
             $table->increments('id');
             $table->string('title', 50);
             $table->string('description', 2000);
+            $table->string('status', 100);
             $table->string('serial_number');
             $table->integer('id_criticality')->unsigned();
             $table->integer('id_type')->unsigned();
