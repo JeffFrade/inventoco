@@ -4,4 +4,5 @@
         'profile' => 'Profile',
         'administrator' => 'Administrator',
         'user' => 'User',
+        'users' => 'Users',
     ];

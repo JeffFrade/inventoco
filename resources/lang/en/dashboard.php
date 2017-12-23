@@ -2,5 +2,9 @@
 
     return [
         'chart' => 'Chart',
-        'table' => 'Table'
+        'charts' => 'Charts',
+        'table' => 'Table',
+        'tables' => 'Tables',
+        'details' => 'View Details',
+        'statistics' => 'Statistics',
     ];
