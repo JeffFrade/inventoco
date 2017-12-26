@@ -1,12 +1,11 @@
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     @include('menus.menu')
-
     <div class="collapse navbar-collapse navbar-ex1-collapse">
         <ul class="nav navbar-nav side-nav">
-            <li class="active">
+            <li {!! (Route::currentRouteName() != 'user.create'?'class="active"':'') !!}>
                 <a href="/admin/user"><i class="fa fa-fw fa-users"></i> {{ trans('others.list') }} {{ trans('user.users') }}</a>
             </li>
-            <li>
+            <li {!! (Route::currentRouteName() == 'user.create'?'class="active"':'') !!}>
                 <a href="/admin/user/create"><i class="fa fa-fw fa-plus"></i> {{ trans('others.insert') }} {{ trans('user.user') }}</a>
             </li>
             <li>
