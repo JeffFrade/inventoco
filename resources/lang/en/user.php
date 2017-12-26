@@ -6,4 +6,6 @@
         'user' => 'User',
         'users' => 'Users',
         'name' => 'Name',
+        'level' => 'Level',
+        'levels' => 'Levels',
     ];

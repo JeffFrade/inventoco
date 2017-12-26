@@ -19,7 +19,7 @@
     <![endif]-->
 </head>
 <body class="branco">
-<div id="wrapper">
+<div id="app">
     @yield('content')
 </div>
 

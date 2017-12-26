@@ -21,7 +21,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'user', 'name', 'email', 'password', 'id_level',
     ];
 
     /**
@@ -31,6 +31,10 @@ class User extends Authenticatable
      */
     protected $hidden = [
         'password'
+    ];
+
+    protected $casts = [
+        'id_level' => 'integer',
     ];
 
     public static function getUser()

@@ -7,6 +7,7 @@
         'delete' => 'Deletar',
         'data' => 'Dados',
         'list' => 'Listar',
+        'action' => 'Ação',
         'actions' => 'Ações',
         'view' => 'Visualizar',
     ];
