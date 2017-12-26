@@ -1,17 +1,17 @@
 {{ csrf_field() }}
 <div class="form-group">
     <label for="user">{{ trans('user.user') }}:</label>
-    <input type="text" id="user" name="user" class="form-control" placeholder="{{ trans('user.user') }}" value="{{ old('user', $users->user) }}">
+    <input type="text" id="user" name="user" class="form-control" placeholder="{{ trans('user.user') }}" value="{{ old('user', $user->user) }}">
 </div>
 
 <div class="form-group">
     <label for="name">{{ trans('user.name') }}:</label>
-    <input type="text" id="user" name="name" class="form-control" placeholder="{{ trans('user.name') }}" value="{{ old('name', $users->name) }}">
+    <input type="text" id="user" name="name" class="form-control" placeholder="{{ trans('user.name') }}" value="{{ old('name', $user->name) }}">
 </div>
 
 <div class="form-group">
     <label for="email">E-mail:</label>
-    <input type="email" id="email" name="email" class="form-control" placeholder="E-mail" value="{{ old('email', $users->email) }}">
+    <input type="email" id="email" name="email" class="form-control" placeholder="E-mail" value="{{ old('email', $user->email) }}">
 </div>
 
 <div class="form-group">

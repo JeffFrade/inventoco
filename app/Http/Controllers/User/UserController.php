@@ -9,39 +9,21 @@ use InvOco\User;
 
 class UserController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
         $users = User::all();
-        $user = User::getUser();
 
-        return view('user.user_index', compact('users', 'user'));
+        return view('user.user_index', compact('users'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
-        $user = User::getUser();
-        $users = new User();
+        $user = new User();
         $levels = Level::all();
 
-        return view('user.user_create', compact('user', 'users', 'levels'));
+        return view('user.user_create', compact( 'user', 'levels'));
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
         $data = $this->_validate($request);
@@ -49,67 +31,41 @@ class UserController extends Controller
 
         User::create($data);
 
-        $user = User::getUser();
         $users = User::all();
 
-        return view ('user.user_index', compact('user', 'users'));
+        return view ('user.user_index', compact( 'users'));
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function show($id)
     {
-        $user = User::getUser();
         $users = User::find($id);
 
-        return view('user.user_show', compact('users', 'user'));
+        return view('user.user_show', compact('users'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
+    public function edit(User $user)
     {
-        $user = User::getUser();
-        $users = User::find($id);
         $levels = Level::all();
 
-        return view('user.user_edit', compact('user', 'users', 'levels'));
+        return view('user.user_edit', compact('user', 'levels'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
+    public function update(Request $request, User $user)
     {
+        $data = $this->_validate($request);
+        $data['password'] = bcrypt($data['password']);
 
+        $user->fill($data);
+        $user->save();
+        return redirect()->route('user.index');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(User $u)
+    public function destroy($id)
     {
-        $u->delete();
+        $users = User::find($id);
+        $users->delete();
 
-        $user = User::getUser();
-        $users = User::all();
-
-        return redirect()->route('user.index', compact('user', 'users'));
+        return redirect()->route('user.index');
     }
 
     protected function _validate(Request $request)

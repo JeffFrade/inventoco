@@ -8,4 +8,5 @@
         'name' => 'Nome',
         'level' => 'Nivel',
         'levels' => 'Níveis',
+        'delete' => 'Deseja excluir este usuário?',
     ];

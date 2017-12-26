@@ -36,8 +36,8 @@
                     </tr>
                 </table>
 
-                <a href="{{ route('user.destroy', ['user' => $user->user]) }}" class="btn btn-danger" onclick="event.preventDefault();if(confirm('Deseja excluir este item?')){document.getElementById('form-delete').submit();}">{{ trans('others.delete') }}</a>
-                <form id="form-delete" style="display: none" action="{{ route('user.destroy', ['user' => $user->user]) }}" method="post">
+                <a href="{{ route('user.destroy', ['user' => $users->user]) }}" class="btn btn-danger" onclick="event.preventDefault();if(confirm('{{ trans('user.delete') }}')){document.getElementById('form-delete').submit();}">{{ trans('others.delete') }}</a>
+                <form id="form-delete" style="display: none" action="{{ route('user.destroy', ['user' => $users->user]) }}" method="post">
                     {{ csrf_field() }}
                     {{ method_field('DELETE') }}
                 </form>

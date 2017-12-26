@@ -9,3 +9,7 @@
 .margin {
     margin: 0px 20px;
 }
+
+.error {
+    list-style: none;
+}

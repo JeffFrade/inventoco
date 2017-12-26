@@ -14,7 +14,9 @@
             </div>
 
             <div class="row">
-                <form method="post" action="{{ route('user.edit', ['user' => $users->id]) }}" class="margin">
+                @include('user.form_user_errors')
+                <form method="post" action="{{ route('user.update', ['user' => $user->user]) }}" class="margin">
+                    {{ method_field('PUT') }}
                     @include('user.form_user')
                     <button type="submit" class="btn btn-warning">{{ trans('others.edit') }} {{ trans('user.user') }}</button>
                 </form>
