@@ -19,3 +19,10 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+
+Route::group([
+    'prefix' => 'admin',
+    'namespace' => 'User',
+], function () {
+    Route::resource('user', 'UserController');
+});

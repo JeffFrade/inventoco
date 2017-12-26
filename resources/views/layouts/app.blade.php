@@ -19,9 +19,14 @@
     <![endif]-->
 </head>
 <body class="branco">
-    <div id="app">
-        @yield('content')
+<div id="wrapper">
+    @include('menus.menu_user')
+    <div id="page-wrapper">
+        <div class="container-fluid">
+            @yield('content')
+        </div>
     </div>
+</div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="{{ asset('js/lightbox.min.js') }}"></script>

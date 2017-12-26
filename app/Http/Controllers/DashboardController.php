@@ -3,6 +3,7 @@
 namespace InvOco\Http\Controllers;
 
 use Illuminate\Http\Request;
+use InvOco\Charts\Chart;
 use InvOco\User;
 use InvOco\Equipment;
 
@@ -25,15 +26,21 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        $equipments = (new Equipment())->with('sector')->get();
-
+        //$equipments = (new Equipment())->with('sector')->get();
         $stocksTable = \Lava::DataTable();
+
+        //$chartArray = [
+        //   'date' => 'Day of Month'];
+
+
+        //$x = (new Chart())->mountChart($chartArray, $stocksTable);
+
+        //$x;
 
         $stocksTable->addDateColumn('Day of Month')
             ->addNumberColumn('Projected')
             ->addNumberColumn('Official');
 
-        // Random Data For Example
         for ($a = 1; $a < 30; $a++) {
             $stocksTable->addRow([
                 '2015-10-' . $a, rand(800,1000), rand(800,1000)
@@ -42,7 +49,7 @@ class DashboardController extends Controller
 
         $chart = \Lava::LineChart('MyStocks', $stocksTable);
 
-        $user = User::find(auth()->id());
+        $user = User::getUser();
         return view('dashboard', compact('user', 'chart'));
     }
 }

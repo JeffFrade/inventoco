@@ -32,4 +32,14 @@ class User extends Authenticatable
     protected $hidden = [
         'password'
     ];
+
+    public static function getUser()
+    {
+        return User::find(auth()->id());
+    }
+
+    public function levels()
+    {
+        return $this->hasOne(Level::class, 'id_level', 'id_level');
+    }
 }

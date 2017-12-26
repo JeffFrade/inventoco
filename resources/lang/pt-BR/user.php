@@ -5,4 +5,5 @@
         'administrator' => 'Administrador',
         'user' => 'Usuário',
         'users' => 'Usuários',
+        'name' => 'Nome',
     ];
