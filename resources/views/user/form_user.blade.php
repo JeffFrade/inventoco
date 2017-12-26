@@ -23,7 +23,7 @@
     <label for="id_level">{{ trans('user.level') }}:</label>
     <select name="id_level" id="id_level" class="form-control">
         @foreach($levels as $level)
-        <option value="{{ $level->id_level }}" {{ ($level->id == $user->id_level?'selected="selected"':'') }}>{{ $level->level }}</option>
+        <option value="{{ $level->id_level }}" {{ ($level->id_level == $user->id_level?'selected="selected"':'') }}>{{ $level->level }}</option>
         @endforeach
     </select>
 </div>

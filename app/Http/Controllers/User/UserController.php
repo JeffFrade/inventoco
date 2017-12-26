@@ -51,7 +51,7 @@ class UserController extends Controller
 
         $user = User::getUser();
         $users = User::all();
-        
+
         return view ('user.user_index', compact('user', 'users'));
     }
 
@@ -63,7 +63,10 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        //
+        $user = User::getUser();
+        $users = User::find($id);
+
+        return view('user.user_show', compact('users', 'user'));
     }
 
     /**
@@ -74,7 +77,11 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        //
+        $user = User::getUser();
+        $users = User::find($id);
+        $levels = Level::all();
+
+        return view('user.user_edit', compact('user', 'users', 'levels'));
     }
 
     /**
@@ -86,7 +93,7 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+
     }
 
     /**
@@ -95,9 +102,14 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(User $u)
     {
-        //
+        $u->delete();
+
+        $user = User::getUser();
+        $users = User::all();
+
+        return redirect()->route('user.index', compact('user', 'users'));
     }
 
     protected function _validate(Request $request)
