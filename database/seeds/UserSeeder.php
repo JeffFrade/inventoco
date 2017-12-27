@@ -22,7 +22,7 @@ class UserSeeder extends Seeder
 
         User::create([
             'user' => 'user',
-            'name' => 'UserController',
+            'name' => 'User',
             'email' => 'user@mail.com',
             'password' => bcrypt('123'),
             'id_level' => 2

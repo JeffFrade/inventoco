@@ -72,9 +72,9 @@ class UserController extends Controller
     {
         $user = $request->route('user');
         $userId = $user instanceof User?$user->user:null;
-        // Criando as validações:
+
         $rules = [
-            'user' => 'required|max:191|unique:user',
+            'user' => "required|max:191|unique:user,user,$userId,user",
             'name' => 'required|max:100',
             'email' => 'required|email',
             'password' => 'required|min:6',

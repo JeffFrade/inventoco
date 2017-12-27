@@ -19,6 +19,7 @@ class CreateEquipmentsTable extends Migration
             $table->string('item');
             $table->string('brand', 50);
             $table->string('fabrication_model', 100);
+            $table->string('image', 2000)->nullable();
             $table->integer('id_sector')->unsigned();
             $table->integer('id_room')->unsigned();
             $table->integer('id_type')->unsigned();

@@ -19,7 +19,7 @@
                             <i class="fa fa-server fa-5x"></i>
                         </div>
                         <div class="col-xs-9 text-right">
-                            <div class="huge">26</div>
+                            <div class="huge">{{ (new \InvOco\Equipment())->count() }}</div>
                             <div>{{ trans('inventory.equipments') }}</div>
                         </div>
                     </div>
@@ -41,7 +41,7 @@
                             <i class="fa fa-building fa-5x"></i>
                         </div>
                         <div class="col-xs-9 text-right">
-                            <div class="huge">12</div>
+                            <div class="huge">{{ (new \InvOco\Sector())->count() }}</div>
                             <div>{{ trans('inventory.sectors') }}</div>
                         </div>
                     </div>
@@ -63,7 +63,7 @@
                             <i class="fa fa-file-excel-o fa-5x"></i>
                         </div>
                         <div class="col-xs-9 text-right">
-                            <div class="huge">124</div>
+                            <div class="huge">{{ (new \InvOco\Report())->count() }}</div>
                             <div>{{ trans('inventory.reports') }}</div>
                         </div>
                     </div>
@@ -85,7 +85,7 @@
                             <i class="fa fa-exclamation-triangle fa-5x"></i>
                         </div>
                         <div class="col-xs-9 text-right">
-                            <div class="huge">13</div>
+                            <div class="huge">{{ (new \InvOco\Occurrences())->count() }}</div>
                             <div>{{ trans('occurrences.occurrences') }}</div>
                         </div>
                     </div>
