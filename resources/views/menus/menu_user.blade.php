@@ -5,20 +5,15 @@
             <li {!! (Route::currentRouteName() != 'user.create'?'class="active"':'') !!}>
                 <a href="/admin/user"><i class="fa fa-fw fa-users"></i> {{ trans('others.list') }} {{ trans('user.users') }}</a>
             </li>
+
             <li {!! (Route::currentRouteName() == 'user.create'?'class="active"':'') !!}>
                 <a href="/admin/user/create"><i class="fa fa-fw fa-plus"></i> {{ trans('others.insert') }} {{ trans('user.user') }}</a>
             </li>
-            <li>
-                <a href="javascript:;" data-toggle="collapse" data-target="#level"><i class="fa fa-fw fa-arrows-v"></i> {{ trans('user.levels') }} <i class="fa fa-fw fa-caret-down"></i></a>
-                <ul id="level" class="collapse">
-                    <li>
-                        <a href="#">{{ trans('others.list') }} {{ trans('user.levels') }}</a>
-                    </li>
-                    <li>
-                        <a href="#">{{ trans('others.insert') }} {{ trans('user.level') }}</a>
-                    </li>
-                </ul>
+
+            <li {!! (Route::currentRouteAction() == 'level'?'class="active"':'')  !!}>
+                <a href="/admin/level"><i class="fa fa-tag"></i> {{ trans('user.levels') }}</a>
             </li>
+
             <li>
                 <a href="javascript:;" data-toggle="collapse" data-target="#action"><i class="fa fa-fw fa-arrows-v"></i> {{ trans('others.actions') }} <i class="fa fa-fw fa-caret-down"></i></a>
                 <ul id="action" class="collapse">

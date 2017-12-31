@@ -25,4 +25,10 @@ Route::group([
     'namespace' => 'User',
 ], function () {
     Route::resource('user', 'UserController');
+
+    Route::get('/level', 'levelController@index');
+    Route::post('/level', 'levelController@store');
+    Route::get('/level/{id}', 'levelController@edit');
+    Route::put('/level/{id}', 'levelController@update');
+    Route::delete('/level/{id}', 'levelController@delete');
 });

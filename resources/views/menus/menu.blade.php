@@ -28,7 +28,7 @@
         <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> {{ $profile->name }} <b class="caret"></b></a>
         <ul class="dropdown-menu">
             <li>
-                <a href="{{ route('user.edit', ['user' => $user->user]) }}"><i class="fa fa-fw fa-user"></i> {{ trans('user.profile') }}</a>
+                <a href="{{ route('user.edit', ['user' => $profile->user]) }}"><i class="fa fa-fw fa-user"></i> {{ trans('user.profile') }}</a>
             </li>
             <li class="divider"></li>
             <li>

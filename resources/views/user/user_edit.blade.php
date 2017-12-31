@@ -14,7 +14,7 @@
             </div>
 
             <div class="row">
-                @include('user.form_user_errors')
+                @include('errors.form_errors')
                 <form method="post" action="{{ route('user.update', ['user' => $user->user]) }}" class="margin">
                     {{ method_field('PUT') }}
                     @include('user.form_user')

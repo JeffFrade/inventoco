@@ -14,7 +14,7 @@
             </div>
 
             <div class="row">
-                @include('user.form_user_errors')
+                @include('errors.form_errors')
                 <form method="post" action="/admin/user" class="margin">
                     @include('user.form_user')
                     <button type="submit" class="btn btn-success">{{ trans('others.insert') }} {{ trans('user.user') }}</button>

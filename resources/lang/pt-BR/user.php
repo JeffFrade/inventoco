@@ -9,4 +9,5 @@
         'level' => 'Nivel',
         'levels' => 'Níveis',
         'delete' => 'Deseja excluir este usuário?',
+        'level_delete' => 'Deseja excluir este nível?'
     ];
