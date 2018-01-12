@@ -8,19 +8,25 @@
     <title>{{ config('app.name', 'InvOco') }}</title>
     <link href="{{ asset('images/icon.ico') }}" rel="shortcut icon">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/lightbox.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/font-awesome.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/sb-admin.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/ionicons.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/jquery-jvectormap.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/AdminLTE.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/_all-skins.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
-<body>
-    <div id="wrapper">
-        @include('menus.menu_dashboard')
+<body class="hold-transition skin-blue sidebar-mini">
+    <div class="wrapper">
+        @include('menus.menu')
         <div id="page-wrapper">
             <div class="container-fluid">
                 @yield('content')
@@ -28,8 +34,17 @@
         </div>
     </div>
 
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="{{ asset('js/jquery.min.js') }}"></script>
     <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('js/fastclick.js') }}"></script>
+    <script src="{{ asset('js/adminlte.min.js') }}"></script>
+    <script src="{{ asset('js/jquery.sparkline.min.js') }}"></script>
+    <script src="{{ asset('js/jquery-jvectormap-1.2.2.min.js') }}"></script>
+    <script src="{{ asset('js/jquery-jvectormap-world-mill-en.js') }}"></script>
+    <script src="{{ asset('js/jquery.slimscroll.min.js') }}"></script>
+    <script src="{{ asset('js/Chart.js') }}"></script>
+    <script src="{{ asset('js/dashboard2.js') }}"></script>
+    <script src="{{ asset('js/demo.js') }}"></script>
+    <script src="{{ asset('js/vue.min.js') }}"></script>
 </body>
 </html>

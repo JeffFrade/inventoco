@@ -23,12 +23,12 @@ class Chart
 
     public function mountChart(array $chartArray, $dataTable)
     {
-        $this->dataTable = $dataTable;
+        /*$this->dataTable = $dataTable;
 
         foreach ($chartArray as $item => $key) {
             $dataTable = app($this->types[$item])->__invoke($key, $dataTable);
         }
 
-        return $dataTable;
+        return $dataTable;*/
     }
 }
