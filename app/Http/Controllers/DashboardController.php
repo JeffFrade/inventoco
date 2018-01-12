@@ -3,19 +3,15 @@
 namespace InvOco\Http\Controllers;
 
 use Illuminate\Http\Request;
-use InvOco\Charts\Chart;
-use InvOco\User;
-use InvOco\Equipment;
+use InvOco\Http\Services\Metrics;
 
 class DashboardController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
+    private $metrics;
+
+    public function __construct(Metrics $metrics)
     {
+        $this->metrics = $metrics;
         $this->middleware('auth');
     }
 
@@ -26,30 +22,10 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        //$equipments = (new Equipment())->with('sector')->get();
-        $stocksTable = \Lava::DataTable();
+        //Variables:
 
-        //$chartArray = [
-        //   'date' => 'Day of Month'];
-
-
-        //$x = (new Chart())->mountChart($chartArray, $stocksTable);
-
-        //$x;
-
-        $stocksTable->addDateColumn('Day of Month')
-            ->addNumberColumn('Projected')
-            ->addNumberColumn('Official');
-
-        for ($a = 1; $a < 30; $a++) {
-            $stocksTable->addRow([
-                '2015-10-' . $a, rand(800,1000), rand(800,1000)
-            ]);
-        }
-
-        $chart = \Lava::LineChart('MyStocks', $stocksTable);
-
-        $user = User::getUser();
-        return view('dashboard', compact('user', 'chart'));
+        return view('dashboard', with([
+            'equipmentsCount' => $this->metrics->countEquipments(),
+        ]));
     }
 }
