@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    Session::flush();
+    //Session::flush();
     return redirect('/login');
 });
 

@@ -13,3 +13,8 @@
 .error {
     list-style: none;
 }
+
+
+th, td {
+    border-color: #666 !important;
+}

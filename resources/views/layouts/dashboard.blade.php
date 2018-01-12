@@ -27,11 +27,16 @@
 <body class="hold-transition skin-blue sidebar-mini">
     <div class="wrapper">
         @include('menus.menu')
-        <div id="page-wrapper">
-            <div class="container-fluid">
-                @yield('content')
+
+        @yield('content')
+
+
+        <footer class="main-footer">
+            <div class="pull-right hidden-xs">
+                <strong>{{ trans('others.version') }}</strong> {{ env('APP_VERSION') }}
             </div>
-        </div>
+            <strong>InvOco 2017-{{ \Carbon\Carbon::now()->year }}</strong>
+        </footer>
     </div>
 
     <script src="{{ asset('js/jquery.min.js') }}"></script>

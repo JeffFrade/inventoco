@@ -10,4 +10,5 @@
         'action' => 'Ação',
         'actions' => 'Ações',
         'view' => 'Visualizar',
+        'version' => 'Versão',
     ];
