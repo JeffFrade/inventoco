@@ -171,12 +171,12 @@ return [
         /*
          * Application Services Providers...
          */
+        Fx3costa\LaravelChartJs\Providers\ChartjsServiceProvider::class,
         InvOco\Providers\AppServiceProvider::class,
         InvOco\Providers\AuthServiceProvider::class,
         // InvOco\Providers\BroadcastServiceProvider::class,
         InvOco\Providers\EventServiceProvider::class,
         InvOco\Providers\RouteServiceProvider::class,
-
         Khill\Lavacharts\Laravel\LavachartsServiceProvider::class,
 
     ],

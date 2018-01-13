@@ -48,6 +48,7 @@
     <script src="{{ asset('js/jquery-jvectormap-world-mill-en.js') }}"></script>
     <script src="{{ asset('js/jquery.slimscroll.min.js') }}"></script>
     <script src="{{ asset('js/Chart.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.min.js"></script>
     <script src="{{ asset('js/dashboard2.js') }}"></script>
     <script src="{{ asset('js/demo.js') }}"></script>
     <script src="{{ asset('js/vue.min.js') }}"></script>

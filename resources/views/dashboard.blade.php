@@ -1,5 +1,4 @@
 @extends('layouts.dashboard')
-@include('dashboard.charts')
 
 @section('content')
     <div class="content-wrapper">
@@ -74,11 +73,11 @@
                             <div class="row">
                                 <div class="col-md-12">
                                 <p class="text-center">
-                                    <strong>{{ trans('occurrences.occurrences') }} - </strong>
+                                    <strong>{{ trans('occurrences.occurrences') }} - {{ Carbon\Carbon::now()->year }}</strong>
                                 </p>
 
                                 <div class="chart">
-                                    <canvas id="salesChart" style="height: 180px;;"></canvas>
+                                    {!! $occurenceChart->render() !!}
                                 </div>
                                 </div>
                             </div>
