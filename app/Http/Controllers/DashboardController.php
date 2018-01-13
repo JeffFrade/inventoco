@@ -26,6 +26,9 @@ class DashboardController extends Controller
 
         return view('dashboard', with([
             'equipmentsCount' => $this->metrics->countEquipments(),
+            'occurrencesCount' => $this->metrics->countOccurrences(),
+            'reportsCount' => $this->metrics->countOccurrences(),
+            'usersCount' => $this->metrics->countUsers(),
         ]));
     }
 }

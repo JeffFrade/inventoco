@@ -26,7 +26,7 @@
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
     <div class="wrapper">
-        @include('menus.menu')
+        @include('menus.menu_dashboard')
 
         @yield('content')
 

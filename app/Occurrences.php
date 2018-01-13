@@ -4,7 +4,7 @@ namespace InvOco;
 
 use Illuminate\Database\Eloquent\Model;
 
-class occurrences extends Model
+class Occurrences extends Model
 {
     //
 }

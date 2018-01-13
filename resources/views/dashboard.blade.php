@@ -28,7 +28,7 @@
 
                         <div class="info-box-content">
                             <span class="info-box-text">{{ trans('occurrences.occurrences') }}</span>
-                            <span class="info-box-number">41</span>
+                            <span class="info-box-number">{{ $occurrencesCount }}</span>
                         </div>
                     </div>
                 </div>
@@ -37,11 +37,11 @@
 
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="info-box">
-                        <span class="info-box-icon bg-green"><i class="ion ion-ios-cart-outline"></i></span>
+                        <span class="info-box-icon bg-green"><i class="fa fa-fw fa-file-excel-o"></i></span>
 
                         <div class="info-box-content">
-                            <span class="info-box-text">Sales</span>
-                            <span class="info-box-number">760</span>
+                            <span class="info-box-text">{{ trans('inventory.reports') }}</span>
+                            <span class="info-box-number">{{ $reportsCount }}</span>
                         </div>
                     </div>
                 </div>
@@ -52,7 +52,7 @@
 
                         <div class="info-box-content">
                             <span class="info-box-text">{{ trans('user.users') }}</span>
-                            <span class="info-box-number">20</span>
+                            <span class="info-box-number">{{ $usersCount }}</span>
                         </div>
                     </div>
                 </div>

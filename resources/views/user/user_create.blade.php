@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    @include('menus.menu')
+    @include('menus.menu_dashboard')
 
     <div id="page-wrapper">
         <div class="container-fluid">
