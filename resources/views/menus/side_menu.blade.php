@@ -16,8 +16,8 @@
             </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="pages/charts/chartjs.html"><i class="fa fa-circle-o"></i> {{ trans('inventory.inventory') }}</a></li>
-                    <li><a href="pages/charts/morris.html"><i class="fa fa-circle-o"></i> {{ trans('occurrences.occurrences') }}</a></li>
+                    <li><a href="pages/charts/chartjs.html"><i class="fa fa-server"></i> {{ trans('inventory.inventory') }}</a></li>
+                    <li><a href="pages/charts/morris.html"><i class="fa fa-exclamation-triangle"></i> {{ trans('occurrences.occurrences') }}</a></li>
                 </ul>
             </li>
             <li class="treeview">
@@ -29,21 +29,22 @@
             </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="pages/UI/general.html"><i class="fa fa-circle-o"></i> General</a></li>
-                    <li><a href="pages/UI/icons.html"><i class="fa fa-circle-o"></i> Icons</a></li>
+                    <li><a href="pages/UI/general.html"><i class="fa fa-server"></i> {{ trans('inventory.inventory') }}</a></li>
+                    <li><a href="pages/UI/icons.html"><i class="fa fa-exclamation-triangle"></i> {{ trans('occurrences.occurrences') }}</a></li>
                 </ul>
             </li>
             <li class="treeview">
                 <a href="#">
-                    <i class="fa fa-info"></i> <span>{{ trans('others.indexes') }}</span>
+                    <i class="fa fa-info"></i>
+                    <span>{{ trans('others.indexes') }}</span>
                     <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="pages/forms/general.html"><i class="fa fa-circle-o"></i> {{ trans('inventory.inventory') }}</a></li>
-                    <li><a href="pages/forms/advanced.html"><i class="fa fa-circle-o"></i> {{ trans('occurrences.occurrences') }}</a></li>
-                    <li><a href="pages/forms/editors.html"><i class="fa fa-circle-o"></i> {{ trans('user.users') }}</a></li>
+                    <li><a href="pages/forms/general.html"><i class="fa fa-server"></i> {{ trans('inventory.inventory') }}</a></li>
+                    <li><a href="pages/forms/advanced.html"><i class="fa fa-exclamation-triangle"></i> {{ trans('occurrences.occurrences') }}</a></li>
+                    <li><a href="pages/forms/editors.html"><i class="fa fa-users"></i> {{ trans('user.users') }}</a></li>
                 </ul>
             </li>
         </ul>
