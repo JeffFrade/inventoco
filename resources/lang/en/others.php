@@ -11,4 +11,5 @@
         'actions' => 'Actions',
         'view' => 'View',
         'version' => 'Version',
+        'indexes' => 'Indexes',
     ];

@@ -11,4 +11,5 @@
         'actions' => 'Ações',
         'view' => 'Visualizar',
         'version' => 'Versão',
+        'indexes' => 'Indíces',
     ];
