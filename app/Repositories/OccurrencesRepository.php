@@ -3,6 +3,7 @@
 namespace InvOco\Repositories;
 
 use InvOco\Occurrences;
+use Carbon\Carbon;
 
 class OccurrencesRepository extends AbstractRepository
 {

@@ -49,7 +49,6 @@
     <script src="{{ asset('js/jquery.slimscroll.min.js') }}"></script>
     <script src="{{ asset('js/Chart.js') }}"></script>
     <script src="{{ asset('js/Chart.bundle.min.js') }}"></script>
-    <script src="{{ asset('js/dashboard2.js') }}"></script>
     <script src="{{ asset('js/demo.js') }}"></script>
     <script src="{{ asset('js/vue.min.js') }}"></script>
 </body>
