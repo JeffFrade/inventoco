@@ -35,7 +35,7 @@
             <div class="pull-right hidden-xs">
                 <strong>{{ trans('others.version') }}</strong> {{ env('APP_VERSION') }}
             </div>
-            <strong>InvOco 2017-{{ \Carbon\Carbon::now()->year }}</strong>
+            <strong>InvOco &copy 2017-{{ \Carbon\Carbon::now()->year }}</strong>
         </footer>
     </div>
 

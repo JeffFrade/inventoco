@@ -24,5 +24,6 @@ class DatabaseSeeder extends Seeder
          $this->call(CriticalitySeeder::class);
          $this->call(TypeOccurrenceSeeder::class);
          $this->call(OccurrenceSeeder::class);
+         $this->call(DocumentSeeder::class);
     }
 }
