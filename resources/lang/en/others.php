@@ -12,4 +12,5 @@
         'view' => 'View',
         'version' => 'Version',
         'indexes' => 'Indexes',
+        'registered' => 'Registered',
     ];

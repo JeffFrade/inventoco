@@ -12,4 +12,5 @@
         'view' => 'Visualizar',
         'version' => 'Versão',
         'indexes' => 'Indíces',
+        'registered' => 'Cadastrados',
     ];
