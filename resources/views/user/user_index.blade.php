@@ -32,7 +32,7 @@
                 </div>
 
                 <div class="box-body">
-                    <table class="table table-bordered table-striped">
+                    <table class="table table-bordered table-striped table-hover dataTable">
                         <thead>
                         <tr>
                             <th class="text-center">{{ trans('user.user') }}</th>

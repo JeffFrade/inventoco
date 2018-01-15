@@ -16,7 +16,7 @@
                 </div>
 
                 <div class="box-body">
-                    <table class="table table-bordered">
+                    <table class="table table-bordered table-striped table-hover dataTable">
                         <tr>
                             <th scope="row">{{ trans('user.user') }}</th>
                             <td>{{ $users->user }}</td>

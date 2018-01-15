@@ -14,24 +14,6 @@
 
         <div class="navbar-custom-menu">
             <ul class="nav navbar-nav">
-                <li class="active">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <i class="fa fa-dashboard"></i> Dashboard
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <i class="fa fa-server"></i> {{ trans('inventory.inventory') }}
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <i class="fa fa-exclamation-triangle"></i> {{ trans('occurrences.occurrences') }}
-                    </a>
-                </li>
-
                 <li class="dropdown user user-menu">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         <i class="fa fa-user"></i><span class="hidden-xs"> {{ $profile->name }}</span>
