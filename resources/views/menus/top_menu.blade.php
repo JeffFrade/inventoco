@@ -24,9 +24,7 @@
                                 <a href="{{ route('user.update', ['id' => $profile->user]) }}" class="btn btn-default btn-flat"><i class="fa fa-user"></i> {{ trans('user.profile') }}</a>
                             </div>
                             <div class="pull-right">
-                                <form action="{{ route('logout') }}" method="post">
-                                    <button class="btn btn-default"><i class="fa fa-power-off"></i> Logout</button>
-                                </form>
+                                <a class="btn btn-default btn-flat" data-toggle="modal" data-target="#logoutModal"><i class="fa fa-fw fa-sign-out"></i>Logout</a>
                             </div>
                         </li>
                     </ul>

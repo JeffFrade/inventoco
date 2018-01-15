@@ -11,4 +11,5 @@
         'levels' => 'Levels',
         'delete' => 'Do you want to delete this user?',
         'level_delete' => 'Do you want to delete this level?',
+        'logout' => 'Are you sure you want to logout?',
     ];

@@ -10,5 +10,6 @@
         'level' => 'Nivel',
         'levels' => 'Níveis',
         'delete' => 'Deseja excluir este usuário?',
-        'level_delete' => 'Deseja excluir este nível?'
+        'level_delete' => 'Deseja excluir este nível?',
+        'logout' => 'Deseja mesmo efetuar Logout?',
     ];

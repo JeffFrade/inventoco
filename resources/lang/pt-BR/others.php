@@ -13,4 +13,5 @@
         'version' => 'Versão',
         'indexes' => 'Indíces',
         'registered' => 'Cadastrados',
+        'cancel' => 'Cancelar',
     ];
