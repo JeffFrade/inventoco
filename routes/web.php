@@ -26,9 +26,9 @@ Route::group([
 ], function () {
     Route::resource('user', 'UserController');
 
-    Route::get('/level', 'levelController@index');
-    Route::post('/level', 'levelController@store');
-    Route::get('/level/{id}', 'levelController@edit');
-    Route::put('/level/{id}', 'levelController@update');
-    Route::delete('/level/{id}', 'levelController@delete');
+    Route::get('/level', 'levelController@index')->name('level.index');
+    Route::post('/level', 'levelController@store')->name('level.store');
+    Route::get('/level/{id}', 'levelController@edit')->name('level.edit');
+    Route::put('/level/{id}', 'levelController@update')->name('level.update');
+    Route::delete('/level/{id}', 'levelController@delete')->name('level.delete');
 });

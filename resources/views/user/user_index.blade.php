@@ -1,4 +1,4 @@
-@extends('layouts.dashboard')
+@extends('layouts.app')
 
 @section('content')
     <div class="content-wrapper">
@@ -19,9 +19,9 @@
                     <div class="btn-group">
                         <a href="{{ route('user.create') }}" class="btn btn-success"><i class="fa fa-plus"></i> {{ trans('others.insert') }} {{ trans('user.user') }}</a>
 
-                        <a href="{{ route('user.create') }}" class="btn btn-success"><i class="fa fa-plus"></i> {{ trans('others.insert') }} {{ trans('user.level') }}</a>
+                        <a href="{{ route('user.create') }}" class="btn btn-primary"><i class="fa fa-tags"></i> {{ trans('user.levels') }}</a>
 
-                        <a href="{{ route('user.create') }}" class="btn btn-success"><i class="fa fa-plus"></i> {{ trans('others.insert') }} {{ trans('others.action') }}</a>
+                        <a href="{{ route('user.create') }}" class="btn btn-primary"><i class="fa fa-tags"></i> {{ trans('others.actions') }}</a>
                     </div>
                 </div>
             </div>
