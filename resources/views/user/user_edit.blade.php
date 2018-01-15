@@ -17,12 +17,11 @@
 
                 <div class="box-body">
                     @include('errors.form_errors')
-                    <form method="post" action="{{ route('user.update', ['user' => $user->user]) }}" class="margin">
-                        {{ method_field('PUT') }}
+                    {{ Form::open(['url' => route('user.update', ['user' => $user->user]), 'method' => 'put']) }}
                         @include('user.form_user')
-                        <button type="submit" class="btn btn-warning">{{ trans('others.edit') }} {{ trans('user.user') }}</button>
+                        {{ Form::submit(trans('others.edit')." ".trans('user.user'), ['class' => 'btn btn-warning']) }}
                         <a href="{{ route('user.index') }}" class="btn btn-primary">Voltar</a>
-                    </form>
+                    {{ Form::close() }}
                 </div>
             </div>
         </section>

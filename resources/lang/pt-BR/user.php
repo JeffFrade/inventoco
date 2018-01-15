@@ -5,6 +5,7 @@
         'administrator' => 'Administrador',
         'user' => 'Usuário',
         'users' => 'Usuários',
+        'password' => 'Senha',
         'name' => 'Nome',
         'level' => 'Nivel',
         'levels' => 'Níveis',

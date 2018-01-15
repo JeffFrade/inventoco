@@ -17,11 +17,11 @@
 
                 <div class="box-body">
                     @include('errors.form_errors')
-                    <form method="post" action="{{ route('user.store') }}" class="margin">
+                    {{ Form::open(['url' => route('user.store'), 'method' => 'post']) }}
                         @include('user.form_user')
-                        <button type="submit" class="btn btn-success">{{ trans('others.insert') }} {{ trans('user.user') }}</button>
+                        {{ Form::submit(trans('others.insert')." ".trans('user.user'), ['class' => 'btn btn-success']) }}
                         <a href="{{ route('user.index') }}" class="btn btn-primary">Voltar</a>
-                    </form>
+                    {{ Form::close() }}
                 </div>
             </div>
         </section>

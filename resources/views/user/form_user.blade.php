@@ -1,26 +1,26 @@
-{{ csrf_field() }}
+{{ Form::token() }}
 <div class="form-group">
-    <label for="user">{{ trans('user.user') }}:</label>
-    <input type="text" id="user" name="user" class="form-control" placeholder="{{ trans('user.user') }}" value="{{ old('user', $user->user) }}">
+    {{ Form::label('user',  trans('user.user').':') }}
+    {{ Form::text('user', old('user', $user->user), ['class' => 'form-control', 'placeholder' => trans('user.user')]) }}
 </div>
 
 <div class="form-group">
-    <label for="name">{{ trans('user.name') }}:</label>
-    <input type="text" id="user" name="name" class="form-control" placeholder="{{ trans('user.name') }}" value="{{ old('name', $user->name) }}">
+    {{ Form::label('name',  trans('user.name').':') }}
+    {{ Form::text('name', old('name', $user->name), ['class' => 'form-control', 'placeholder' => trans('user.name')]) }}
 </div>
 
 <div class="form-group">
-    <label for="email">E-mail:</label>
-    <input type="email" id="email" name="email" class="form-control" placeholder="E-mail" value="{{ old('email', $user->email) }}">
+    {{ Form::label('email', 'E-mail:') }}
+    {{ Form::email('email', old('email', $user->email), ['class' => 'form-control', 'placeholder' => 'E-mail']) }}
 </div>
 
 <div class="form-group">
-    <label for="password">{{ trans('auth.password') }}:</label>
-    <input type="password" id="password" name="password" class="form-control" placeholder="{{ trans('auth.password') }}" value="{{ old('password', '') }}">
+    {{ Form::label('password',  trans('user.password').':') }}
+    {{ Form::password('password', ['class' => 'form-control', 'placeholder' => trans('user.password')]) }}
 </div>
 
 <div class="form-group">
-    <label for="id_level">{{ trans('user.level') }}:</label>
+    {{ Form::label('id_level',  trans('user.level').':') }}
     <select name="id_level" id="id_level" class="form-control">
         @foreach($levels as $level)
         <option value="{{ $level->id_level }}" {{ ($level->id_level == $user->id_level?'selected="selected"':'') }}>{{ $level->level }}</option>

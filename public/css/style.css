@@ -2,19 +2,10 @@
     padding-top:100px;
 }
 
-.branco {
-    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAA1BMVEX///+nxBvIAAAASElEQVR4nO3BgQAAAADDoPlTX+AIVQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwDcaiAAFXD1ujAAAAAElFTkSuQmCC") !important;
-}
-
-.margin {
-    margin: 0px 20px;
+.alert-danger {
+    color: #a94442 !important;
 }
 
 .error {
     list-style: none;
-}
-
-
-table, th, td {
-    /*border-color: #999 !important;*/
 }
