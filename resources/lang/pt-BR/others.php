@@ -14,4 +14,9 @@
         'indexes' => 'Indíces',
         'registered' => 'Cadastrados',
         'cancel' => 'Cancelar',
+        'select' => 'Selecionar',
+        'differences' => 'Divergências',
+        'in' => 'Na',
+        'clear' => 'Limpar',
+        'export' => 'Exportar',
     ];

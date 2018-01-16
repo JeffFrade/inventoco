@@ -32,3 +32,10 @@ Route::group([
     Route::put('/level/{id}', 'levelController@update')->name('level.update');
     Route::delete('/level/{id}', 'levelController@delete')->name('level.delete');
 });
+
+Route::group([
+    'prefix' => 'inventory',
+    'namespace' => 'Inventory',
+], function () {
+    Route::get('/index', 'equipmentController@index')->name('inventory.index');
+});

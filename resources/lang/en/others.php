@@ -14,4 +14,9 @@
         'indexes' => 'Indexes',
         'registered' => 'Registered',
         'cancel' => 'Cancel',
+        'select' => 'Select',
+        'differences' => 'Differences',
+        'in' => 'In',
+        'clear' => 'Clear',
+        'export' => 'Export',
     ];

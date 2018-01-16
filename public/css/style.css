@@ -9,3 +9,28 @@
 .error {
     list-style: none;
 }
+
+.overflow {
+    overflow: auto !important;
+}
+
+.equipments {
+    height: 925px !important;
+}
+
+.difference {
+    height: 200px !important;
+}
+
+
+textarea {
+    resize: none;
+}
+
+img{
+    max-width:250px;
+    max-height:200px;
+    width:auto;
+    height:auto;
+    margin-bottom:15px;
+}

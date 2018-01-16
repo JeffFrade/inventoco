@@ -5,7 +5,7 @@
                 <a href="{{ route('dashboard') }}"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a>
             </li>
             <li>
-                <a href="#"><i class="fa fa-server"></i> <span>{{ trans('inventory.inventory') }}</span></a>
+                <a href="{{ route('inventory.index') }}"><i class="fa fa-server"></i> <span>{{ trans('inventory.inventory') }}</span></a>
             </li>
             <li>
                 <a href="#"><i class="fa fa-exclamation-triangle"></i> <span>{{ trans('occurrences.occurrences') }}</span></a>
