@@ -6,6 +6,10 @@
     color: #a94442 !important;
 }
 
+.alert-warning {
+    color: #8a6d3b !important;
+}
+
 .error {
     list-style: none;
 }

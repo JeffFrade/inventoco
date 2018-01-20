@@ -11,7 +11,7 @@
         'actions' => 'Ações',
         'view' => 'Visualizar',
         'version' => 'Versão',
-        'indexes' => 'Indíces',
+        'indexes' => 'Indicadores',
         'registered' => 'Cadastrados',
         'cancel' => 'Cancelar',
         'select' => 'Selecionar',
@@ -19,4 +19,6 @@
         'in' => 'Na',
         'clear' => 'Limpar',
         'export' => 'Exportar',
+        'warning' => 'Aviso',
+        'equipment_search' => 'Para Pesquisas Manuais (Sem Leitor) Basta Digitar o Número do Código de Barras e Pressionar ',
     ];

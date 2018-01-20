@@ -20,7 +20,8 @@ class EquipmentSeeder extends Seeder
             'fabrication_model' => 'officiis',
             'id_sector' => 2,
             'id_room' => 2,
-            'id_type' => 2
+            'id_type' => 2,
+            'image' => 'https://vuejs.org/images/logo.png',
         ]);
 
         factory(Equipment::class, 20)->create();

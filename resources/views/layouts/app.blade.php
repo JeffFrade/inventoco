@@ -23,13 +23,14 @@
     <![endif]-->
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+
+    @yield('css')
 </head>
 <body class="hold-transition skin-blue  sidebar-collapse sidebar-mini">
     <div class="wrapper">
         @include('menus.top_menu')
 
         @yield('content')
-
 
         <footer class="main-footer">
             <div class="pull-right hidden-xs">
@@ -71,5 +72,7 @@
     <script src="{{ asset('js/Chart.bundle.min.js') }}"></script>
     <script src="{{ asset('js/demo.js') }}"></script>
     <script src="{{ asset('js/vue.min.js') }}"></script>
+
+    @yield('js')
 </body>
 </html>
