@@ -38,4 +38,5 @@ Route::group([
     'namespace' => 'Inventory',
 ], function () {
     Route::get('/index', 'equipmentController@index')->name('inventory.index');
+    Route::post('/index', 'equipmentController@search')->name('inventory.search');
 });

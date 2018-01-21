@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: jefferson.frade
- * Date: 12/01/2018
- * Time: 21:52
- */
 
 namespace InvOco\Repositories;
 
@@ -16,5 +10,12 @@ abstract class AbstractRepository
     public function count()
     {
         return $this->model->count();
+    }
+
+    public function customFind(string $field, $value, string $operator = '=')
+    {
+        $query = $this->model->where($field, $operator, $value)->first();
+
+        return $query;
     }
 }

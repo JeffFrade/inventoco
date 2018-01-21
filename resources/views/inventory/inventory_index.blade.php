@@ -52,8 +52,9 @@
                             <hr/>
 
                             @include('errors.form_errors')
-                            {{ Form::open(['url' => route('inventory.index'), 'method' => 'post']) }}
+                            {{ Form::open(['url' => route('inventory.search'), 'method' => 'post']) }}
                                 {{ Form::token() }}
+
                                 <div class="alert alert-warning">
                                     <strong>{{ trans('others.warning') }}: </strong> {{ trans('others.equipment_search') }} <strong><u>Enter</u></strong>
                                 </div>
@@ -75,7 +76,7 @@
 
                                 <div class="form-group">
                                     {{ Form::label('type', trans('inventory.type').":") }}
-                                    {{ Form::text('type', old('type', $equipment->type), ['class' => 'form-control', 'placeholder' => trans('inventory.type'), 'disabled' => 'disabled']) }}
+                                    {{ Form::text('type', old('type', $equipment->type->type ?? ''), ['class' => 'form-control', 'placeholder' => trans('inventory.type'), 'disabled' => 'disabled']) }}
                                 </div>
 
                                 <div class="form-group">
@@ -85,17 +86,17 @@
 
                                 <div class="form-group">
                                     {{ Form::label('model', trans('inventory.model').":") }}
-                                    {{ Form::text('model', old('brand', $equipment->fabricationModel), ['class' => 'form-control', 'placeholder' => trans('inventory.model'), 'disabled' => 'disabled']) }}
+                                    {{ Form::text('model', old('brand', $equipment->fabrication_model), ['class' => 'form-control', 'placeholder' => trans('inventory.model'), 'disabled' => 'disabled']) }}
                                 </div>
 
                                 <div class="form-group">
                                     {{ Form::label('sector', trans('inventory.sector').":") }}
-                                    {{ Form::text('sector', old('sector', $equipment->sector), ['class' => 'form-control', 'placeholder' => trans('inventory.sector'), 'disabled' => 'disabled']) }}
+                                    {{ Form::text('sector', old('sector', $equipment->sector->sector ?? ''), ['class' => 'form-control', 'placeholder' => trans('inventory.sector'), 'disabled' => 'disabled']) }}
                                 </div>
 
                                 <div class="form-group">
                                     {{ Form::label('room', trans('inventory.room').":") }}
-                                    {{ Form::text('room', old('sector', $equipment->room), ['class' => 'form-control', 'placeholder' => trans('inventory.room'), 'disabled' => 'disabled']) }}
+                                    {{ Form::text('room', old('sector', $equipment->room->room ?? ''), ['class' => 'form-control', 'placeholder' => trans('inventory.room'), 'disabled' => 'disabled']) }}
                                 </div>
 
                                 <div class="form-group">
@@ -105,7 +106,7 @@
 
                                 <div class="form-group">
                                     {{ Form::label('image', trans('inventory.image').":") }}
-                                    <a href="" data-lightbox="roadtrip"><img id="image" name="image" src="" title="" alt="" class="img-responsive"></a>
+                                    <a href="{{ $equipment->image }}" data-lightbox="lb"><img id="image" name="image" src="{{ $equipment->image }}" title="{{ $equipment->item }}" alt="{{ $equipment->item }}" class="img-responsive"></a>
                                 </div>
 
                                 <div class="form-group">
