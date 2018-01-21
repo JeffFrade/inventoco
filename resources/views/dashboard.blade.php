@@ -72,15 +72,19 @@
                         <div class="box-body">
                             <div class="row">
                                 <div class="col-md-12">
-                                <p class="text-center">
-                                    <strong>{{ trans('occurrences.occurrences') }} - {{ Carbon\Carbon::now()->year }}</strong>
-                                </p>
+                                    <p class="text-center">
+                                        <strong>{{ trans('occurrences.occurrences') }} - {{ Carbon\Carbon::now()->year }}</strong>
+                                    </p>
 
-                                <div class="chart">
-                                    {!! $occurenceChart->render() !!}
-                                </div>
+                                    <div class="chart">
+                                        {!! $occurrenceChart->render() !!}
+                                    </div>
                                 </div>
                             </div>
+                        </div>
+
+                        <div class="box-footer">
+                            <strong>Total: {{ $yearOccurrences }} {{ trans('occurrences.occurrences') }}</strong>
                         </div>
                     </div>
 
@@ -97,14 +101,18 @@
                         <div class="box-body">
                             <div class="row">
                                 <div class="col-md-12">
-                                <p class="text-center">
-                                    <strong>{{ trans('inventory.equipments') }} - {{ Carbon\Carbon::now()->year }}</strong>
-                                </p>
+                                    <p class="text-center">
+                                        <strong>{{ trans('inventory.equipments') }} - {{ Carbon\Carbon::now()->year }}</strong>
+                                    </p>
 
-                                <div class="chart">
-                                    {!! $equipmentChart->render() !!}
+                                    <div class="chart">
+                                        {!! $equipmentChart->render() !!}
+                                    </div>
                                 </div>
-                                </div>
+                            </div>
+
+                            <div class="box-footer">
+                                <strong>Total: {{ $yearEquipments }} {{ trans('inventory.equipments') }}</strong>
                             </div>
                         </div>
                     </div>

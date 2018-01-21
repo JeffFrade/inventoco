@@ -41,4 +41,14 @@ class Metrics
     {
         return $this->usersRepository->count();
     }
+
+    public function countOccurrencesYear()
+    {
+        return $this->occurrencesRepository->countYear();
+    }
+
+    public function countEquipmentsYear()
+    {
+        return $this->equipmentsRepository->countYear();
+    }
 }

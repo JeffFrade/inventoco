@@ -22,4 +22,9 @@ class OccurrencesRepository extends AbstractRepository
 
         return $data;
     }
+
+    public function countYear()
+    {
+        return $this->model->whereYear('created_at', Carbon::now()->year)->count();
+    }
 }

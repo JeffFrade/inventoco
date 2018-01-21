@@ -40,7 +40,9 @@ class DashboardController extends Controller
             'occurrencesCount' => $this->metrics->countOccurrences(),
             'reportsCount' => $this->metrics->countOccurrences(),
             'usersCount' => $this->metrics->countUsers(),
-            'occurenceChart' => $this->charts->occurencesChart(),
+            'yearOccurrences' => $this->metrics->countOccurrencesYear(),
+            'yearEquipments' => $this->metrics->countEquipmentsYear(),
+            'occurrenceChart' => $this->charts->occurencesChart(),
             'equipmentChart' => $this->charts->equipmentsChart(),
         ]));
     }
