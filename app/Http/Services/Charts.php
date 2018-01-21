@@ -11,6 +11,7 @@ class Charts
     private $chart;
     private $equipmentsRepository;
     private $occurrencesRepository;
+    private $months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
     public function __construct(Chart $chart, EquipmentsRepository $equipmentsRepository, OccurrencesRepository $occurrencesRepository)
     {
@@ -21,8 +22,13 @@ class Charts
 
     public function occurencesChart()
     {
-        $labels = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-        $dataset = $this->chart->dataset(trans('occurrences.occurrences'), 'rgba(0, 115, 183, 0.7)', 'rgba(0, 115, 183, 1)', $this->occurrencesRepository->countByMonths());
-        return $this->chart->createChart(trans('occurrences.occurrences'), 'line', ['width' => 400, 'height' => 100], $labels, $dataset);
+        $dataset = $this->chart->dataset(trans('occurrences.occurrences'), $this->occurrencesRepository->countByMonths());
+        return $this->chart->createChart(trans('occurrences.occurrences'), 'line', ['width' => 400, 'height' => 100], $this->months, $dataset);
+    }
+
+    public function equipmentsChart()
+    {
+        $dataset = $this->chart->dataset(trans('inventory.equipments'), $this->equipmentsRepository->countByMonths());
+        return $this->chart->createChart(trans('inventory.equipments'), 'line', ['width' => 400, 'height' => 100], $this->months, $dataset);
     }
 }

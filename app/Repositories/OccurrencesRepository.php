@@ -17,7 +17,7 @@ class OccurrencesRepository extends AbstractRepository
         $data = [];
 
         for ($i = 1; $i <= 12; $i++) {
-            $data[] = $this->model->whereMonth('updated_at', $i)->count();
+            $data[] = $this->model->whereMonth('created_at', $i)->count();
         }
 
         return $data;

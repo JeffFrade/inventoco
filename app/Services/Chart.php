@@ -4,7 +4,7 @@ namespace InvOco\Services;
 
 class Chart
 {
-    public function dataset(string $label, string $bgColor, string $borderColor, array $data)
+    public function dataset(string $label, array $data, string $bgColor = 'rgba(0, 115, 183, 0.7)', string $borderColor = 'rgba(0, 115, 183, 1)')
     {
         return [
             "label" => $label,
