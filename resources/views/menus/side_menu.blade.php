@@ -4,8 +4,19 @@
             <li class="active">
                 <a href="{{ route('dashboard') }}"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a>
             </li>
-            <li>
-                <a href="{{ route('inventory.index') }}"><i class="fa fa-server"></i> <span>{{ trans('inventory.inventory') }}</span></a>
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-server"></i>
+                    <span>{{ trans('inventory.inventory') }}</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+
+                <ul class="treeview-menu">
+                    <li><a href="{{ route('inventory.index') }}"><i class="fa fa-search"></i> {{ trans('inventory.inventory') }}</a></li>
+                    <li><a href="pages/charts/chartjs.html"><i class="fa fa-plus"></i> {{ trans('others.insert') }} {{ trans('inventory.equipments') }}</a></li>
+                </ul>
             </li>
             <li>
                 <a href="#"><i class="fa fa-exclamation-triangle"></i> <span>{{ trans('occurrences.occurrences') }}</span></a>
