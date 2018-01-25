@@ -39,4 +39,5 @@ Route::group([
 ], function () {
     Route::get('/index', 'equipmentController@index')->name('inventory.index');
     Route::post('/index', 'equipmentController@search')->name('inventory.search');
+    Route::put('/index/{sector}')->name('sector.room');
 });

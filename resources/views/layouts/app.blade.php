@@ -27,7 +27,7 @@
     @yield('css')
 </head>
 <body class="hold-transition skin-blue  sidebar-collapse sidebar-mini">
-    <div class="wrapper">
+    <div id="app" class="wrapper">
         @include('menus.top_menu')
 
         @yield('content')
@@ -73,6 +73,7 @@
     <script src="{{ asset('js/demo.js') }}"></script>
     <script src="{{ asset('js/lightbox.min.js') }}"></script>
     <script src="{{ asset('js/vue.min.js') }}"></script>
+    <script src="{{ asset('js/script.js') }}"></script>
 
     @yield('js')
 </body>

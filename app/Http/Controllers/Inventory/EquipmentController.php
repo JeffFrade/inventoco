@@ -24,10 +24,12 @@ class EquipmentController extends Controller
     {
         $equipment = new Equipment();
         $sector = (new Sector())->all();
+        $all = $equipment->all();
 
         return view('inventory.inventory_index', with([
             'equipment' => $equipment,
             'sectors' => $sector,
+            'equipments' => $all,
         ]));
     }
 
@@ -35,12 +37,14 @@ class EquipmentController extends Controller
     public function search(Request $request)
     {
         $equipment = $this->equipment->findEquipment($request['codebar']);
+        $all = (new Equipment())->all();
 
         $sector = (new Sector())->all();
 
         return view('inventory.inventory_index', with([
             'equipment' => $equipment,
             'sectors' => $sector,
+            'equipments' => $all,
         ]));
     }
 }

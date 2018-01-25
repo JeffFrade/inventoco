@@ -20,7 +20,7 @@
                             {{ Form::open(['url' => route('inventory.index'), 'method' => 'post']) }}
                                 <div class="form-group">
                                     {{ Form::label('id_sector', trans('inventory.sector').":") }}
-                                    <select name="id_sector" id="id_sector" class="form-control">
+                                    <select name="id_sector" id="id_sector" class="form-control sector">
                                         @foreach($sectors as $sector)
                                             <option value="{{ $sector->id_sector }}">{{ $sector->sector }}</option>
                                         @endforeach
@@ -54,7 +54,6 @@
                             @include('errors.form_errors')
                             {{ Form::open(['url' => route('inventory.search'), 'method' => 'post']) }}
                                 {{ Form::token() }}
-
                                 <div class="alert alert-warning">
                                     <strong>{{ trans('others.warning') }}: </strong> {{ trans('others.equipment_search') }} <strong><u>Enter</u></strong>
                                 </div>
@@ -155,7 +154,9 @@
                                     </tbody>
                                 </table>
                             </div>
+                        </div>
 
+                        <div class="box-footer">
                             {{ Form::open(['url' => route('inventory.index'), 'method' => 'Delete']) }}
                                 {{ Form::submit(trans('others.clear'), ['class' => 'btn btn-danger']) }}
                             {{ Form::close() }}
@@ -187,20 +188,25 @@
                                     </thead>
 
                                     <tbody>
+                                        @{{ item }}
+                                        @foreach($equipments as $equip)
                                         <tr>
-                                            <td class="text-center"></td>
-                                            <td class="text-center"></td>
-                                            <td class="text-center"></td>
-                                            <td class="text-center"></td>
-                                            <td class="text-center"></td>
-                                            <td class="text-center"></td>
-                                            <td class="text-center"></td>
-                                            <td class="text-center"></td>
+                                            <td class="text-center"><a href="#" class="btn btn-default"><i class="fa fa-search"></i></a></td>
+                                            <td class="text-center">{{ $equip->serial_number }}</td>
+                                            <td class="text-center">{{ $equip->item }}</td>
+                                            <td class="text-center">{{ $equip->brand }}</td>
+                                            <td class="text-center">{{ $equip->fabrication_model }}</td>
+                                            <td class="text-center">{{ $equip->sector->sector }}</td>
+                                            <td class="text-center">{{ $equip->room->room }}</td>
+                                            <td class="text-center">{{ $equip->obs }}</td>
                                         </tr>
+                                        @endforeach
                                     </tbody>
                                 </table>
                             </div>
+                        </div>
 
+                        <div class="box-footer">
                             {{ Form::open(['url' => route('inventory.index'), 'method' => 'Delete']) }}
                                 {{ Form::submit(trans('others.clear'), ['class' => 'btn btn-danger']) }}
                                 <a href="#" class="btn btn-success" title="{{ trans('others.export') }}"><i class="fa fa-file-excel-o"></i> {{ trans('others.export') }}</a>
@@ -214,6 +220,7 @@
 @endsection
 
 @section('js')
+    <script src="{{ asset('js/inventory.js') }}"></script>
     <script>
         $('.filter').on('change', function (e) {
             if ($('.filter:checked').val() === 'barcode') {
@@ -223,6 +230,25 @@
                 $('#serial_number').prop("disabled", false);
                 $('#codebar').prop("disabled", true);
             }
+        });
+
+        $('.sector').on('change', function (e) {
+            let sector = this.value;
+
+            get.method = 'PUT';
+
+            get.body = $.param({
+                sector
+            });
+
+            get.headers.append('Content-Type', 'application/x-www-form-urlencoded');
+
+            fetch(base_url + `${deal_id}/payments/${payment_id}`, get)
+                .then(helpers.response.status)
+                .then(helpers.response.json)
+                .then((response) => {
+                    location.reload();
+                });
         });
     </script>
 @stop
