@@ -15,7 +15,7 @@
 
                 <ul class="treeview-menu">
                     <li><a href="{{ route('inventory.index') }}"><i class="fa fa-search"></i> {{ trans('inventory.inventory') }}</a></li>
-                    <li><a href="pages/charts/chartjs.html"><i class="fa fa-plus"></i> {{ trans('others.insert') }} {{ trans('inventory.equipments') }}</a></li>
+                    <li><a href="{{ route('inventory.create') }}"><i class="fa fa-plus"></i> {{ trans('others.insert') }} {{ trans('inventory.equipments') }}</a></li>
                 </ul>
             </li>
             <li>

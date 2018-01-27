@@ -220,7 +220,6 @@
 @endsection
 
 @section('js')
-    <script src="{{ asset('js/inventory.js') }}"></script>
     <script>
         $('.filter').on('change', function (e) {
             if ($('.filter:checked').val() === 'barcode') {
@@ -232,7 +231,7 @@
             }
         });
 
-        $('.sector').on('change', function (e) {
+        /*$('.sector').on('change', function (e) {
             let sector = this.value;
 
             get.method = 'PUT';
@@ -249,6 +248,6 @@
                 .then((response) => {
                     location.reload();
                 });
-        });
+        });*/
     </script>
 @stop

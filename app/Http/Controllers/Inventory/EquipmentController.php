@@ -8,6 +8,7 @@ use InvOco\Equipment;
 use InvOco\Http\Services\Equipment as SEquipment;
 use InvOco\Repositories\EquipmentsRepository;
 use InvOco\Sector;
+use InvOco\TypeEquipment;
 
 class EquipmentController extends Controller
 {
@@ -31,6 +32,25 @@ class EquipmentController extends Controller
             'sectors' => $sector,
             'equipments' => $all,
         ]));
+    }
+
+    public function create()
+    {
+        $equipment = new Equipment();
+        $type = (new TypeEquipment())->all();
+
+        $sector = (new Sector())->all();
+
+        return view('inventory.inventory_create', with([
+            'equipment' => $equipment,
+            'sector' => $sector,
+            'type' => $type,
+        ]));
+    }
+
+    public function store(Request $request)
+    {
+        return redirect(route(''));
     }
 
 

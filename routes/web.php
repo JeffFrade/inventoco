@@ -38,6 +38,8 @@ Route::group([
     'namespace' => 'Inventory',
 ], function () {
     Route::get('/index', 'equipmentController@index')->name('inventory.index');
+    Route::get('/create', 'equipmentController@create')->name('inventory.create');
+    Route::post('/store', 'equipmentController@store')->name('inventory.store');
     Route::post('/index', 'equipmentController@search')->name('inventory.search');
     Route::put('/index/{sector}')->name('sector.room');
 });
