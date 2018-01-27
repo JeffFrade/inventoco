@@ -1,3 +1,4 @@
+{{ csrf_token() }}
 <div class="form-group">
     {{ Form::label('codebar', trans('inventory.barcode').":") }}
     {{ Form::text('codebar', old('codebar', $equipment->codebar), ['class' => 'form-control', 'placeholder' => trans('inventory.barcode'), 'value' => $equipment->codebar]) }}
