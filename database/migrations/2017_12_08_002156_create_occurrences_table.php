@@ -23,6 +23,7 @@ class CreateOccurrencesTable extends Migration
             $table->integer('id_type')->unsigned();
             $table->string('user');
             $table->timestamps();
+            $table->softDeletes();
             $table->foreign('serial_number')
                 ->references('serial_number')
                 ->on('equipments')

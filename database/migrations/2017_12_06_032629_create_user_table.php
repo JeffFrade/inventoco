@@ -26,6 +26,7 @@ class CreateUserTable extends Migration
                 ->onDelete('cascade');
             $table->primary('user');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

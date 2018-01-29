@@ -25,6 +25,7 @@ class CreateEquipmentsTable extends Migration
             $table->integer('id_room')->unsigned();
             $table->integer('id_type')->unsigned();
             $table->timestamps();
+            $table->softDeletes();
             $table->primary(['serial_number', 'codebar']);
             $table->foreign('id_sector')
                 ->references('id_sector')

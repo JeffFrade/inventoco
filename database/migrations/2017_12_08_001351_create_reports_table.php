@@ -18,6 +18,7 @@ class CreateReportsTable extends Migration
             $table->string('user');
             $table->string('serial_number');
             $table->timestamps();
+            $table->softDeletes();
             $table->foreign('user')
                 ->references('user')
                 ->on('user')
