@@ -4,8 +4,8 @@ namespace InvOco\Http\Controllers\User;
 
 use Illuminate\Http\Request;
 use InvOco\Http\Controllers\Controller;
-use InvOco\Level;
-use InvOco\User;
+use InvOco\Repositories\Models\Level;
+use InvOco\Repositories\Models\User;
 
 class UserController extends Controller
 {

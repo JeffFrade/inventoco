@@ -4,7 +4,7 @@ namespace InvOco\Http\Controllers\User;
 
 use Illuminate\Http\Request;
 use InvOco\Http\Controllers\Controller;
-use InvOco\Level;
+use InvOco\Repositories\Models\Level;
 
 class LevelController extends Controller
 {

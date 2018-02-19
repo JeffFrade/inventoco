@@ -4,11 +4,11 @@ namespace InvOco\Http\Controllers\Inventory;
 
 use Illuminate\Http\Request;
 use InvOco\Http\Controllers\Controller;
-use InvOco\Equipment;
+use InvOco\Repositories\Models\Equipment;
 use InvOco\Http\Services\Equipment as SEquipment;
 use InvOco\Repositories\EquipmentsRepository;
-use InvOco\Sector;
-use InvOco\TypeEquipment;
+use InvOco\Repositories\Models\Sector;
+use InvOco\Repositories\Models\TypeEquipment;
 
 class EquipmentController extends Controller
 {
