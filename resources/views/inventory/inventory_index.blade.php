@@ -249,33 +249,43 @@
                 headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')}
             });
 
+            $(function () {
+                changeRoom();
+            });
+
             $('#id_sector').on('change', function(e) {
-                $('.overlay').removeClass('hidden');
-
-                $.ajax({
-                    contentType: 'application/x-www-form-urlencoded',
-
-                    data: {
-                        sector: $('#id_sector').val()
-                    },
-
-                    method: 'POST',
-
-                    url: '/inventory/index/sector',
-
-                    timeout: 0,
-
-                    success: function (response) {
-                        $('#id_room').children().remove();
-
-                        for (index in response) {
-                            $('#id_room').append(new Option(response[index]['room'], response[index]['id_room']));
-                        }
-
-                        $('.overlay').addClass('hidden');
-                    }
-                });
+                changeRoom();
             });
         });
+
+        // Function to Change Sector and Bring Room
+        function changeRoom()
+        {
+            $('.overlay').removeClass('hidden');
+
+            $.ajax({
+                contentType: 'application/x-www-form-urlencoded',
+
+                data: {
+                    sector: $('#id_sector').val()
+                },
+
+                method: 'POST',
+
+                url: '/inventory/index/sector',
+
+                timeout: 0,
+
+                success: function (response) {
+                    $('#id_room').children().remove();
+
+                    for (index in response) {
+                        $('#id_room').append(new Option(response[index]['room'], response[index]['id_room']));
+                    }
+
+                    $('.overlay').addClass('hidden');
+                }
+            });
+        }
     </script>
 @stop
