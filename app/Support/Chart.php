@@ -1,10 +1,10 @@
 <?php
 
-namespace InvOco\Services;
+namespace InvOco\Support;
 
-class Chart
+abstract class Chart
 {
-    public function dataset(string $label, array $data, string $bgColor = 'rgba(0, 115, 183, 0.7)', string $borderColor = 'rgba(0, 115, 183, 1)')
+    protected function createDataset(string $label, array $data, string $bgColor = 'rgba(0, 115, 183, 0.7)', string $borderColor = 'rgba(0, 115, 183, 1)')
     {
         return [
             "label" => $label,
@@ -18,7 +18,7 @@ class Chart
         ];
     }
 
-    public function createChart(string $name, string $type, array $size, array $labels, array  $datasets, array $options = [])
+    protected function createChart(string $name, string $type, array $size, array $labels, array  $datasets, array $options = [])
     {
         return app()->chartjs
             ->name($name)
