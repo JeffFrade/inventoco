@@ -35,6 +35,9 @@
                                 </div>
                             {{ Form::close() }}
                         </div>
+                        <div class="overlay hidden">
+                            <i class="fa fa-refresh fa-spin"></i>
+                        </div>
                     </div>
 
                     <div class="box box-primary">
@@ -116,6 +119,9 @@
                                 {{ Form::submit('', ['class' => 'hidden']) }}
                             {{ Form::close() }}
                         </div>
+                        <div class="overlay hidden">
+                            <i class="fa fa-refresh fa-spin"></i>
+                        </div>
                     </div>
                 </div>
 
@@ -161,6 +167,9 @@
                                 {{ Form::submit(trans('others.clear'), ['class' => 'btn btn-danger']) }}
                             {{ Form::close() }}
                         </div>
+                        <div class="overlay hidden">
+                            <i class="fa fa-refresh fa-spin"></i>
+                        </div>
                     </div>
 
                     <div class="box box-success">
@@ -188,7 +197,6 @@
                                     </thead>
 
                                     <tbody>
-                                        @{{ item }}
                                         @foreach($equipments as $equip)
                                         <tr>
                                             <td class="text-center"><a href="#" class="btn btn-default"><i class="fa fa-search"></i></a></td>
@@ -212,6 +220,9 @@
                                 <a href="#" class="btn btn-success" title="{{ trans('others.export') }}"><i class="fa fa-file-excel-o"></i> {{ trans('others.export') }}</a>
                             {{ Form::close() }}
                         </div>
+                        <div class="overlay hidden">
+                            <i class="fa fa-refresh fa-spin"></i>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -231,23 +242,18 @@
             }
         });
 
-        /*$('.sector').on('change', function (e) {
-            let sector = this.value;
+        //$('.overlay').removeClass('hidden');
 
-            get.method = 'PUT';
-
-            get.body = $.param({
-                sector
+        jQuery(document).ready(function ($) {
+            $.ajaxSetup({
+                headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')}
             });
 
-            get.headers.append('Content-Type', 'application/x-www-form-urlencoded');
+            $.ajax({
+                url: '',
 
-            fetch(base_url + `${deal_id}/payments/${payment_id}`, get)
-                .then(helpers.response.status)
-                .then(helpers.response.json)
-                .then((response) => {
-                    location.reload();
-                });
-        });*/
+
+            });
+        });
     </script>
 @stop
