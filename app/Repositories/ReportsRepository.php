@@ -2,7 +2,7 @@
 
 namespace InvOco\Repositories;
 
-use InvOco\Report;
+use InvOco\Repositories\Models\Report;
 
 class ReportsRepository extends AbstractRepository
 {

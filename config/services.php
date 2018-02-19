@@ -30,7 +30,7 @@ return [
     ],
 
     'stripe' => [
-        'model' => InvOco\User::class,
+        'model' => InvOco\Repositories\Models\User::class,
         'key' => env('STRIPE_KEY'),
         'secret' => env('STRIPE_SECRET'),
     ],

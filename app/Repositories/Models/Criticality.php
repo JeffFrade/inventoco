@@ -1,12 +1,10 @@
 <?php
 
-namespace InvOco;
+namespace InvOco\Repositories\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Temp extends Model
+class Criticality extends Model
 {
-    protected $table = 'temp';
-
     public $timestamps = false;
 }

@@ -1,10 +1,10 @@
 <?php
 
-namespace InvOco;
+namespace InvOco\Repositories\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class TypeOccurrence extends Model
+class TypeEquipment extends Model
 {
     public $timestamps = false;
 }

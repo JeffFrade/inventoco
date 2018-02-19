@@ -1,5 +1,5 @@
 @php
-    $profile = \InvOco\User::getUser();
+    $profile = \InvOco\Repositories\Models\User::getUser();
 @endphp
 <header class="main-header">
     <a href="{{ route('dashboard') }}" class="logo">

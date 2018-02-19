@@ -2,7 +2,7 @@
 
 namespace InvOco\Repositories;
 
-use InvOco\Occurrences;
+use InvOco\Repositories\Models\Occurrences;
 use Carbon\Carbon;
 
 class OccurrencesRepository extends AbstractRepository

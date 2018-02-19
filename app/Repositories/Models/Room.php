@@ -1,6 +1,6 @@
 <?php
 
-namespace InvOco;
+namespace InvOco\Repositories\Models;
 
 use Illuminate\Database\Eloquent\Model;
 

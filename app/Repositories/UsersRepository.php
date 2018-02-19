@@ -2,7 +2,7 @@
 
 namespace InvOco\Repositories;
 
-use InvOco\User;
+use InvOco\Repositories\Models\User;
 
 class UsersRepository extends AbstractRepository
 {

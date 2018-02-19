@@ -2,7 +2,7 @@
 
 namespace InvOco\Repositories;
 
-use InvOco\Equipment;
+use InvOco\Repositories\Models\Equipment;
 use Carbon\Carbon;
 
 class EquipmentsRepository extends AbstractRepository
