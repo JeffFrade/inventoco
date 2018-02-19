@@ -42,5 +42,5 @@ Route::group([
     Route::get('/edit', 'equipmentController@edit')->name('inventory.edit');
     Route::post('/store', 'equipmentController@store')->name('inventory.store');
     Route::post('/index', 'equipmentController@search')->name('inventory.search');
-    Route::put('/index/{sector}')->name('sector.room');
+    Route::post('/index/sector', 'equipmentController@findSector')->name('inventory.sector');
 });

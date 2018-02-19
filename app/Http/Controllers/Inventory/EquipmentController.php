@@ -9,16 +9,19 @@ use InvOco\Http\Services\Equipment as SEquipment;
 use InvOco\Repositories\EquipmentsRepository;
 use InvOco\Repositories\Models\Sector;
 use InvOco\Repositories\Models\TypeEquipment;
+use InvOco\Repositories\RoomRepository;
 
 class EquipmentController extends Controller
 {
     private $equipmentsRepository;
+    private $roomRepository;
     private $equipment;
 
-    public function __construct(EquipmentsRepository $equipmentsRepository, SEquipment $equipment)
+    public function __construct(EquipmentsRepository $equipmentsRepository, SEquipment $equipment, RoomRepository $roomRepository)
     {
         $this->equipmentsRepository = $equipmentsRepository;
         $this->equipment = $equipment;
+        $this->roomRepository = $roomRepository;
     }
 
     public function index()
@@ -66,5 +69,10 @@ class EquipmentController extends Controller
             'sectors' => $sector,
             'equipments' => $all,
         ]));
+    }
+
+    public function findSector(Request $request)
+    {
+        return $this->roomRepository->findRooms($request['sector']);
     }
 }

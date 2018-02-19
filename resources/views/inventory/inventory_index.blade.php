@@ -17,23 +17,21 @@
                         </div>
 
                         <div class="box-body">
-                            {{ Form::open(['url' => route('inventory.index'), 'method' => 'post']) }}
-                                <div class="form-group">
-                                    {{ Form::label('id_sector', trans('inventory.sector').":") }}
-                                    <select name="id_sector" id="id_sector" class="form-control sector">
-                                        @foreach($sectors as $sector)
-                                            <option value="{{ $sector->id_sector }}">{{ $sector->sector }}</option>
-                                        @endforeach
-                                    </select>
-                                </div>
+                            <div class="form-group">
+                                {{ Form::label('id_sector', trans('inventory.sector').":") }}
+                                <select name="id_sector" id="id_sector" class="form-control sector">
+                                    @foreach($sectors as $sector)
+                                        <option value="{{ $sector->id_sector }}">{{ $sector->sector }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
 
-                                <div class="form-group">
-                                    {{ Form::label('id_room', trans('inventory.room').":") }}
-                                    <select name="id_room" id="id_room" class="form-control">
+                            <div class="form-group">
+                                {{ Form::label('id_room', trans('inventory.room').":") }}
+                                <select name="id_room" id="id_room" class="form-control">
 
-                                    </select>
-                                </div>
-                            {{ Form::close() }}
+                                </select>
+                            </div>
                         </div>
                         <div class="overlay hidden">
                             <i class="fa fa-refresh fa-spin"></i>
@@ -244,15 +242,39 @@
 
         //$('.overlay').removeClass('hidden');
 
+
         jQuery(document).ready(function ($) {
+
             $.ajaxSetup({
                 headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')}
             });
 
-            $.ajax({
-                url: '',
+            $('#id_sector').on('change', function(e) {
+                $('.overlay').removeClass('hidden');
 
+                $.ajax({
+                    contentType: 'application/x-www-form-urlencoded',
 
+                    data: {
+                        sector: $('#id_sector').val()
+                    },
+
+                    method: 'POST',
+
+                    url: '/inventory/index/sector',
+
+                    timeout: 0,
+
+                    success: function (response) {
+                        $('#id_room').children().remove();
+
+                        for (index in response) {
+                            $('#id_room').append(new Option(response[index]['room'], response[index]['id_room']));
+                        }
+
+                        $('.overlay').addClass('hidden');
+                    }
+                });
             });
         });
     </script>
