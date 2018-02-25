@@ -21,4 +21,7 @@
         'export' => 'Export',
         'warning' => 'Warning',
         'equipment_search' => 'For Manual Searches (Without Reader) Simply Enter the Bar Code Number and Press',
+        'created_at' => 'Created At',
+        'updated_at' => 'Updated At',
+        'deleted_at' => 'Deleted At',
     ];

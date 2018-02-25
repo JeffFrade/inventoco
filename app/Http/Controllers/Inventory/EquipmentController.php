@@ -71,6 +71,15 @@ class EquipmentController extends Controller
         ]));
     }
 
+    public function find($serial)
+    {
+        $equipment = $this->equipmentsRepository->customFind('serial_number', $serial);
+
+        return view('inventory.inventory_show', with([
+            'equipment' => $equipment,
+        ]));
+    }
+
     public function findSector(Request $request)
     {
         return $this->roomRepository->findRooms($request['sector']);

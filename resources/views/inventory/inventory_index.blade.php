@@ -32,6 +32,8 @@
 
                                 </select>
                             </div>
+
+                            <button class="btn btn-primary"><i class="fa fa-check"></i> {{ trans('others.select') }}</button>
                         </div>
                         <div class="overlay hidden">
                             <i class="fa fa-refresh fa-spin"></i>
@@ -197,7 +199,7 @@
                                     <tbody>
                                         @foreach($equipments as $equip)
                                         <tr>
-                                            <td class="text-center"><a href="#" class="btn btn-default"><i class="fa fa-search"></i></a></td>
+                                            <td class="text-center"><a href="{{ route('inventory.find', ['serial' => $equip->serial_number]) }}" class="btn btn-default"><i class="fa fa-search"></i></a></td>
                                             <td class="text-center">{{ $equip->serial_number }}</td>
                                             <td class="text-center">{{ $equip->item }}</td>
                                             <td class="text-center">{{ $equip->brand }}</td>
@@ -239,8 +241,6 @@
                 $('#codebar').prop("disabled", true);
             }
         });
-
-        //$('.overlay').removeClass('hidden');
 
 
         jQuery(document).ready(function ($) {
