@@ -33,12 +33,12 @@ $app->singleton(
 
 $app->singleton(
     Illuminate\Contracts\Console\Kernel::class,
-    InvOco\Core\ConsoleKernel::class
+    InvOco\Core\Console\ConsoleKernel::class
 );
 
 $app->singleton(
     Illuminate\Contracts\Debug\ExceptionHandler::class,
-    InvOco\Core\ExceptionHandler::class
+    InvOco\Core\Exceptions\ExceptionHandler::class
 );
 
 /*
