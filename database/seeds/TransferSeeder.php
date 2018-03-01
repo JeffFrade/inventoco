@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use InvOco\Transfer;
+use InvOco\Repositories\Models\Transfer;
 
 class TransferSeeder extends Seeder
 {

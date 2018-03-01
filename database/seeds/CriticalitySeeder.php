@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use InvOco\Criticality;
+use InvOco\Repositories\Models\Criticality;
 
 class CriticalitySeeder extends Seeder
 {

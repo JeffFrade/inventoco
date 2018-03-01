@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use InvOco\User;
+use InvOco\Repositories\Models\User;
 
 class UserSeeder extends Seeder
 {

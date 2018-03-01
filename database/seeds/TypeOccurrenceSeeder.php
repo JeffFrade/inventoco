@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use InvOco\TypeOccurrence;
+use InvOco\Repositories\Models\TypeOccurrence;
 
 class TypeOccurrenceSeeder extends Seeder
 {

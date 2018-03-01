@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use InvOco\Document;
+use InvOco\Repositories\Models\Document;
 
 class DocumentSeeder extends Seeder
 {

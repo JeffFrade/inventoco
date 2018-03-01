@@ -1,7 +1,7 @@
 <?php
 
 use Faker\Generator as Faker;
-use InvOco\Temp;
+use InvOco\Repositories\Models\Temp;
 
 $factory->define(Temp::class, function (Faker $faker) {
     $users = [0 => 'admin', 1 => 'user'];

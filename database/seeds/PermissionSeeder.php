@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use InvOco\Permission;
+use InvOco\Repositories\Models\Permission;
 
 class PermissionSeeder extends Seeder
 {

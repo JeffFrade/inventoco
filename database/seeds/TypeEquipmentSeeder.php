@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use InvOco\TypeEquipment;
+use InvOco\Repositories\Models\TypeEquipment;
 
 class TypeEquipmentSeeder extends Seeder
 {

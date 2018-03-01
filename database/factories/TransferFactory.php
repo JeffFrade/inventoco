@@ -1,7 +1,7 @@
 <?php
 
 use Faker\Generator as Faker;
-use InvOco\Transfer;
+use InvOco\Repositories\Models\Transfer;
 
 $factory->define(Transfer::class, function (Faker $faker) {
     $users = [0 => 'admin', 1 => 'user'];

@@ -1,7 +1,7 @@
 <?php
 
 use Faker\Generator as Faker;
-use InvOco\Document;
+use InvOco\Repositories\Models\Document;
 
 $factory->define(Document::class, function (Faker $faker) {
     return [

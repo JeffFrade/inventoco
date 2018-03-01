@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use InvOco\Temp;
+use InvOco\Repositories\Models\Temp;
 
 class TempSeeder extends Seeder
 {

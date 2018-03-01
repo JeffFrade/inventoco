@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder as Seeder;
-use InvOco\Action;
+use InvOco\Repositories\Models\Action;
 
 class ActionSeeder extends Seeder
 {

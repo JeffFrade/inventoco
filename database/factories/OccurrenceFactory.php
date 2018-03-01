@@ -1,7 +1,7 @@
 <?php
 
 use Faker\Generator as Faker;
-use InvOco\Occurrences;
+use InvOco\Repositories\Models\Occurrences;
 
 $factory->define(Occurrences::class, function (Faker $faker) {
     $users = [0 => 'admin', 1 => 'user'];

@@ -1,7 +1,7 @@
 <?php
 
 use Faker\Generator as Faker;
-use InvOco\Equipment;
+use InvOco\Repositories\Models\Equipment;
 
 $factory->define(Equipment::class, function (Faker $faker) {
     return [

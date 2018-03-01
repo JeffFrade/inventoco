@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use InvOco\Sector;
+use InvOco\Repositories\Models\Sector;
 
 class SectorSeeder extends Seeder
 {

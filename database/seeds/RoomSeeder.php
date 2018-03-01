@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use InvOco\Room;
+use InvOco\Repositories\Models\Room;
 
 class RoomSeeder extends Seeder
 {

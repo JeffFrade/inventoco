@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use InvOco\Level;
+use InvOco\Repositories\Models\Level;
 
 class LevelSeeder extends Seeder
 {
