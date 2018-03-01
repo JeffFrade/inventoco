@@ -54,6 +54,16 @@ return [
             'engine' => null,
         ],
 
+        'consolidate' => [
+            'driver' => 'mongodb',
+            'dsn' => env('CONSOLIDATE_DSN'),
+            'database' => env('CONSOLIDATE_DATABASE'),
+            'options' => [
+                'connectTimeoutMS'  => 50000,
+                'socketTimeoutMS'   => 0
+            ]
+        ],
+
         'pgsql' => [
             'driver' => 'pgsql',
             'host' => env('DB_HOST', '127.0.0.1'),
