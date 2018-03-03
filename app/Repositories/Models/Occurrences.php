@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Occurrences extends Model
 {
     use SoftDeletes;
+
+    public function criticality()
+    {
+        return $this->hasOne(Criticality::class, 'id_criticality', 'id_criticality');
+    }
 }
